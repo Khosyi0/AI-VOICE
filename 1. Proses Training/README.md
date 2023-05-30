@@ -185,4 +185,4 @@ Output :
 - File G_###.pth
 - File D_###.pth
 
-File-file tersebut yang akan kita gunakan dalam proses perubahan suara
+File-file tersebut yang akan kita gunakan dalam proses perubahan suara. File yang akan digunakan adalah file `G_###.pth` dan `config.json`, sedangkan Untuk file `D_###.pth` tidak akan digunakan pada proses selanjutnya.
