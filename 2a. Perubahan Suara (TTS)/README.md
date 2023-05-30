@@ -16,7 +16,7 @@ import audiosegment
 from IPython.display import Audio, display
 
 gender = "Female" #@param ["Male", "Female"]
-text = "halo teman teman, tes tes" #@param {type:"string"}
+text = "isi text" #@param {type:"string"}
 
 if gender == "Male":
   command = ['edge-tts', '--voice', 'id-ID-ArdiNeural', '--text', text, '--write-media', 'tts.mp3', '--write-subtitles', 'isi_tts.vtt']
@@ -38,8 +38,8 @@ audio = audio.set_channels(1)
 audio.export("tts.wav", format='wav')
 
 AUDIO = "/content/tts" 
-MODEL = "/content/drive/MyDrive/sovits/G_978.pth" #@param {type:"string"}
-CONFIG = "/content/drive/MyDrive/sovits/config.json" #@param {type:"string"}
+MODEL = "isi path file pth" #@param {type:"string"}
+CONFIG = "isi path file config.json" #@param {type:"string"}
 METHOD = "harvest" #@param ["harvest", "dio", "crepe", "crepe-tiny", "parselmouth"]
 PITCH = 0 #@param {type:"slider", min:-12, max:12, step:1}
 
@@ -65,7 +65,7 @@ Terdapat pilihan `gender`, `text`, `MODEL`, `CONFIG`, `METHOD`, dan `PITCH`.
 |    METHOD    | memilih metode apa yang digunakan untuk merubah suara |
 |    PITCH     | mengatur pitch dari suara tts awal yang digenerate |
 
-- Perlu diketahui jika tts yang digenerate oleh google merupakan tts Bahasa Indonesia.
+- Perlu diketahui jika tts yang digenerate oleh google merupakan TTS Bahasa Indonesia.
 - Pengaturan pitch tidak akan memiliki efek ketika pada kode bagian ini belum dicommand.
 ```
 # Auto Pitch Mode
