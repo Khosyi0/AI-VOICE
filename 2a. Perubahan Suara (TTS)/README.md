@@ -37,7 +37,7 @@ audio = audio.set_channels(1)
 # Export the audio to WAV format
 audio.export("tts.wav", format='wav')
 
-AUDIO = "/content/tts" #@param {type:"string"}
+AUDIO = "/content/tts" 
 MODEL = "/content/drive/MyDrive/sovits/G_978.pth" #@param {type:"string"}
 CONFIG = "/content/drive/MyDrive/sovits/config.json" #@param {type:"string"}
 METHOD = "harvest" #@param ["harvest", "dio", "crepe", "crepe-tiny", "parselmouth"]
@@ -54,3 +54,28 @@ try:
   display(Audio(f"{AUDIO}.out.wav", autoplay=True))
 except Exception as e:  print("Error:", str(e))
 ```
+### Cara menggunakan
+Terdapat pilihan `gender`, `text`, `MODEL`, `CONFIG`, `METHOD`, dan `PITCH`.
+|    Pilihan   |    Keterangan    |
+| :----------: | :--------: |
+|    gender    | memilih suara awal tts yang akan digenerate oleh google |
+|     text     | isi dari TTS yang akan digenerate |
+|    MODEL     | masukkan file .pth |
+|    CONFIG    | masukkan file config.json |
+|    METHOD    | memilih metode apa yang digunakan untuk merubah suara |
+|    PITCH     | mengatur pitch dari suara tts awal yang digenerate |
+
+- Perlu diketahui jika tts yang digenerate oleh google merupakan tts Bahasa Indonesia.
+- Pengaturan pitch tidak akan memiliki efek ketika pada kode bagian ini belum dicommand.
+```
+# Auto Pitch Mode
+!svc infer {AUDIO}.wav -c {CONFIG} -m {MODEL} -fm {METHOD}
+```
+- dan pada bagian ini commandnya belum dihilangkan.
+```
+# Manual Pitch Mode
+#!svc infer {AUDIO}.wav -c {CONFIG} -m {MODEL} -fm {METHOD} -na -t {PITCH}
+```
+
+## Algortima
+Ketika di run, program akan menggenerate TTS Bahasa Indonesia dari Google dalam bentuk file .mp3. Setelah file `tts.mp3` didapatkan, program akan merubah format file tersebut menjadi `tts.wav`. Lalu, file `tts.wav` tersebut akan dirubah isi suaranya menjadi suara yang kita inginkan dan akan memiliki output file bernama `tts.out.wav`. Ada juga file tambahan bernama `isi_tts.vtt` yang merupakan log dari program tersebut.
