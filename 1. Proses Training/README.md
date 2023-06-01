@@ -10,11 +10,11 @@ drive.mount('/content/drive')
 Sebelumnya, kita harus memiliki file .wav suara dari seseorang dengan jernih, jelas, dan diusahakan lebih dari 5 menit lalu dimasukkan ke google drive kita untuk siap ditraining.
 ## Splitting Audio
 Berikutnya, kita akan melakukan splitting file .wav yang sudah kita simpan di google drive. Hal ini bertujuan agar mempermudah dan memperlancar proses training
-```
+```py
 SPEAKER_NAME = "isi_nama_suara" #@param {type:"string"}
 !mkdir -p data_audiosplit/{SPEAKER_NAME}
 ```
-```
+```py
 from scipy.io import wavfile
 import os
 import numpy as np
