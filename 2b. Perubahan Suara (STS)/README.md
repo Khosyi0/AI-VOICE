@@ -2,7 +2,7 @@
 Setelah melakukan training dan mendapatkan output filenya, kita bisa melakukan perekaman suara kita sendiri dan merubah suara kita menjadi suara hasil training tadi.
 ## Menginstall kebutuhan library
 Sebelum menginstall kebutuhan library, anda bisa melakukan mount google drive terlebih dahulu.
-```
+```py
 !python -m pip install -U pip wheel
 !pip install -U ipython
 !pip install -U so-vits-svc-fork
@@ -10,7 +10,7 @@ Sebelum menginstall kebutuhan library, anda bisa melakukan mount google drive te
 ```
 ## Merekam Suara Sendiri
 Terlebih dahulu coba run program berikut
-```
+```py
 from IPython.display import HTML, Audio
 from google.colab.output import eval_js
 from base64 import b64decode
@@ -49,18 +49,18 @@ def get_audio():
   return audio, sr
 ```
 Setelah itu, run program dibawah untuk merekam suara anda. Tekan tombol stop untk berhenti merekam.
-```
+```py
 audio, sr = get_audio()
 ```
 Jika suara rekaman anda sudah cocok, maka run program dibawah untuk menyimpan hasil rekaman anda.
-```
+```py
 from scipy.io import wavfile
 wavfile.write("speech.wav", sr, audio)
 ```
 
 ## Perubahan Suara
 Jalankan program berikut untuk memulai proses perubahan suara. Jangan lupa untuk mengubah path file untuk `MODEL` dan `CONFIG`nya.
-```
+```py
 from IPython.display import Audio
 
 AUDIO = "/content/speech"
