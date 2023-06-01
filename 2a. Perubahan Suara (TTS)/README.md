@@ -2,7 +2,7 @@
 Setelah melakukan training dan mendapatkan output filenya, kita bisa menggenerate TTS dari apa yang kita tuliskan dan merubah suaranya menjadi suara hasil training tadi.
 ## Menginstall kebutuhan library
 Sebelum menginstall kebutuhan library, anda bisa melakukan mount google drive terlebih dahulu.
-```
+```py
 !python -m pip install -U pip wheel
 !pip install -U ipython
 !pip install -U so-vits-svc-fork
@@ -10,7 +10,7 @@ Sebelum menginstall kebutuhan library, anda bisa melakukan mount google drive te
 !pip install audiosegment
 ```
 ## Generate TTS Sekaligus Merubah Suara
-```
+```py
 import subprocess
 import audiosegment
 from IPython.display import Audio, display
@@ -67,12 +67,12 @@ Terdapat pilihan `gender`, `text`, `MODEL`, `CONFIG`, `METHOD`, dan `PITCH`.
 
 - Perlu diketahui jika tts yang digenerate oleh google merupakan TTS Bahasa Indonesia.
 - Pengaturan pitch tidak akan memiliki efek ketika pada kode bagian ini belum dicommand.
-```
+```py
 # Auto Pitch Mode
 !svc infer {AUDIO}.wav -c {CONFIG} -m {MODEL} -fm {METHOD}
 ```
 - dan pada bagian ini commandnya belum dihilangkan.
-```
+```py
 # Manual Pitch Mode
 #!svc infer {AUDIO}.wav -c {CONFIG} -m {MODEL} -fm {METHOD} -na -t {PITCH}
 ```
