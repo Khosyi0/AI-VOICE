@@ -156,3 +156,6 @@ except Exception as e:  print("Error:", str(e))
 
 ## Cara Penggunaan dan Algoritma
 User akan diminta untuk melakukan perekaman suara sendiri. User juga dapat melakukan retake suara sebelum menyimpan hasil suara yang akan dirubah. Setelah user sudah puas dengan suaranya, user akan diminta untuk menyimpan dan memiliki output file `speech.wav`. Setelah menyimpan file tersebut, user akan diminta untuk menjalankan program untuk merubah suara. Setelah melakukan perubahan suara, outputnya adalah file `speech.out.wav`.
+
+### Google Colab
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Gw0cW_BR83uvX4uValxR97xywH6qxvtz?usp=sharing)
