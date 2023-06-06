@@ -3,7 +3,7 @@ Untuk mempermudah penggunaannya, kita bisa meminjam komputer google dengan cara 
 ## Mount Google Drive
 Langkah pertama yang harus kita lakukan adalah nge-mount google drive kita, mengapa kita harus nge-mount google drive kita, hal ini bertujuan agar ketika kita akan melakukan training, dapat langsung di save di google drive dan ketika ingin mengupload sesuatu yang diinginkan dapat melalui google drive, karena ketika mengupload langsung ke google colab cukup memakan waktu yang lebih lama.
 Berikut command untuk nge-mount google drive :
-```
+```py
 from google.colab import drive
 drive.mount('/content/drive')
 ```
@@ -155,27 +155,27 @@ with open (output_dir+'\\'+output_filename_prefix+'.json', 'w') as output:
 
 ## Persiapan Training
 Sebelum menjalankan kode berikut, pastikan tidak ada direktori `so-vits-svc-fork` pada google drive
-```
+```py
 !python -m pip install -U pip wheel
 %pip install -U ipython
 %pip install -U so-vits-svc-fork
 !mkdir drive/MyDrive/so-vits-svc-fork
 ```
 Setelah proses selesai, tekan tombol `RESTART RUNTIME` lalu lakukan command berikut untuk menyiapkan data hasil training
-```
+```py
 !svc pre-resample
 !svc pre-config
 !cp configs/44k/config.json drive/MyDrive/so-vits-svc-fork
 ```
 Jalankan command berikut juga, berikut merupakan pilihan jenis hasil train suara yang dapat dipilih
-```
+```py
 F0_METHOD = "dio" #@param ["crepe", "crepe-tiny", "parselmouth", "dio", "harvest"]
 !svc pre-hubert -fm {F0_METHOD}
 ```
 
 ## Melakukan Training
 Menggunakan fitur tensorboard yang disediakan oleh framework TensorFlow dan membiarkan proses train selama beberapa menit
-```
+```py
 %load_ext tensorboard
 %tensorboard --logdir drive/MyDrive/so-vits-svc-fork/logs/44k
 !svc train --model-path drive/MyDrive/so-vits-svc-fork/logs/44k
