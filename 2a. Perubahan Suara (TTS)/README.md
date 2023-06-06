@@ -77,5 +77,5 @@ Terdapat pilihan `gender`, `text`, `MODEL`, `CONFIG`, `METHOD`, dan `PITCH`.
 #!svc infer {AUDIO}.wav -c {CONFIG} -m {MODEL} -fm {METHOD} -na -t {PITCH}
 ```
 
-## Algortima
+## Algoritma
 Ketika di run, program akan menggenerate TTS Bahasa Indonesia dari Google dalam bentuk file .mp3. Setelah file `tts.mp3` didapatkan, program akan merubah format file tersebut menjadi `tts.wav`. Lalu, file `tts.wav` tersebut akan dirubah isi suaranya menjadi suara yang kita inginkan dan akan memiliki output file bernama `tts.out.wav`. Ada juga file tambahan bernama `isi_tts.vtt` yang merupakan log dari program tersebut.
