@@ -154,18 +154,18 @@ with open (output_dir+'\\'+output_filename_prefix+'.json', 'w') as output:
 ```
 
 ## Persiapan Training
-Sebelum menjalankan kode berikut, pastikan tidak ada direktori `train-voice-ai` pada google drive
+Sebelum menjalankan kode berikut, pastikan tidak ada direktori `so-vits-svc-fork` pada google drive
 ```
 !python -m pip install -U pip wheel
 %pip install -U ipython
 %pip install -U so-vits-svc-fork
-!mkdir drive/MyDrive/train-voice-ai
+!mkdir drive/MyDrive/so-vits-svc-fork
 ```
 Setelah proses selesai, tekan tombol `RESTART RUNTIME` lalu lakukan command berikut untuk menyiapkan data hasil training
 ```
 !svc pre-resample
 !svc pre-config
-!cp configs/44k/config.json drive/MyDrive/train-voice-ai
+!cp configs/44k/config.json drive/MyDrive/so-vits-svc-fork
 ```
 Jalankan command berikut juga, berikut merupakan pilihan jenis hasil train suara yang dapat dipilih
 ```
@@ -177,8 +177,8 @@ F0_METHOD = "dio" #@param ["crepe", "crepe-tiny", "parselmouth", "dio", "harvest
 Menggunakan fitur tensorboard yang disediakan oleh framework TensorFlow dan membiarkan proses train selama beberapa menit
 ```
 %load_ext tensorboard
-%tensorboard --logdir drive/MyDrive/train-voice-ai/logs/44k
-!svc train --model-path drive/MyDrive/train-voice-ai/logs/44k
+%tensorboard --logdir drive/MyDrive/so-vits-svc-fork/logs/44k
+!svc train --model-path drive/MyDrive/so-vits-svc-fork/logs/44k
 ```
 Output :
 - File config.json
