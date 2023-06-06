@@ -49,6 +49,6 @@ result = subprocess.run(command.split(), stdout=subprocess.PIPE)
 print(result.stdout.decode())
 ```
 ### Google Colab
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/136hv_GbpIIfUcqZKD6yriS77mebGhF5s?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Khosyi0/AI-VOICE/blob/main/0.%20Opsional/0_opsional.ipynb)
 
 
