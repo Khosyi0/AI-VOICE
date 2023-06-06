@@ -48,3 +48,7 @@ command = f"demucs --two-stems=vocals {AUDIO_INPUT}"
 result = subprocess.run(command.split(), stdout=subprocess.PIPE)
 print(result.stdout.decode())
 ```
+### Google Colab
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/136hv_GbpIIfUcqZKD6yriS77mebGhF5s?usp=sharing)
+
+
