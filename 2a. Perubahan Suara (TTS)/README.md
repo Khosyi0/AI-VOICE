@@ -65,7 +65,7 @@ Terdapat pilihan `gender`, `text`, `MODEL`, `CONFIG`, `METHOD`, dan `PITCH`.
 |    METHOD    | memilih metode apa yang digunakan untuk merubah suara |
 |    PITCH     | mengatur pitch dari suara tts awal yang digenerate |
 
-- Perlu diketahui jika tts yang digenerate oleh google merupakan TTS Bahasa Indonesia.
+- Perlu diketahui jika tts yang digenerate oleh google merupakan TTS Bahasa Indonesia. Jika ingin selain Bahasa Indonesia, anda dapat merubah sendiri kodingan diatas pada bagian `'id-ID-ArdiNeural'` untuk suara laki-laki dan `'id-ID-GadisNeural'` untuk suara perempuan dengan suara lain yang ada pada list `edge-TTS-list.txt`.
 - Pengaturan pitch tidak akan memiliki efek ketika pada kode bagian ini belum dicommand.
 ```py
 # Auto Pitch Mode
