@@ -19,7 +19,7 @@ ydl_opts = {
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'wav',
     }],
-    "outtmpl": 'youtubeaudio/audio',  # this is where you can edit how you'd like the filenames to be formatted
+    "outtmpl": 'youtubeaudio/audio',  # path output file
 }
 def download_from_url(url):
     ydl.download([url])
@@ -28,7 +28,7 @@ def download_from_url(url):
 
 
 with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-      url = "https://www.youtube.com/" #@param {type:"string"}
+      url = "https://www.youtube.com/" #@param {type:"string"} # ganti dengan url video
       download_from_url(url)
 ```
 
