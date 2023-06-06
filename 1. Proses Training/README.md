@@ -12,7 +12,7 @@ Sebelumnya, kita harus memiliki file .wav suara dari seseorang dengan jernih, je
 Berikutnya, kita akan melakukan splitting file .wav yang sudah kita simpan di google drive. Hal ini bertujuan agar mempermudah dan memperlancar proses training
 ```py
 SPEAKER_NAME = "isi_nama_suara" #@param {type:"string"}
-!mkdir -p data_audiosplit/{SPEAKER_NAME}
+!mkdir -p dataset_raw/{SPEAKER_NAME}
 ```
 ```py
 from scipy.io import wavfile
@@ -72,7 +72,7 @@ def rising_edges(binary_signal):
 
 # Change the arguments and the input file here
 input_file = "path file audio .wav" #@param {type:"string"}
-output_dir = f"/content/data_audiosplit/{SPEAKER_NAME}"
+output_dir = f"/content/dataset_raw/{SPEAKER_NAME}"
 min_silence_length = 0.6  # The minimum length of silence at which a split may occur [seconds]. Defaults to 3 seconds.
 silence_threshold = 1e-4  # The energy level (between 0.0 and 1.0) below which the signal is regarded as silent.
 step_duration = 0.03/10   # The amount of time to step forward in the input file after calculating energy. Smaller value = slower, but more accurate silence detection. Larger value = faster, but might miss some split opportunities. Defaults to (min-silence-length / 10.).
