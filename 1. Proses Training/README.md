@@ -188,4 +188,4 @@ Output :
 File-file tersebut yang akan kita gunakan dalam proses perubahan suara. File yang akan digunakan adalah file `G_###.pth` dan `config.json`, sedangkan Untuk file `D_###.pth` tidak akan digunakan pada proses selanjutnya.
 
 ### Google Colab
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1l6z5WGs0h50IzZZiTO5xyIa1Tnx78JAF?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Khosyi0/AI-VOICE/blob/main/1.%20Proses%20Training/1_Proses_Training.ipynb)
